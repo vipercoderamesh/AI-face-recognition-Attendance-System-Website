@@ -1,0 +1,175 @@
+<!--
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=0.65">
+        <title>{{title}}</title>
+        <style type="text/css">
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: 'Arial';
+            }
+            .mainHeading{
+                text-align: center;
+                background-color: #6940bc;
+                color: #fff;
+                font-family: 'Times New Roman';
+                padding: 10px;
+            }
+            .wrap h2{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .wrap{
+                width: 410px;
+                overflow: hidden;
+                margin: auto;
+                margin-top: 120px;
+                padding: 20px;
+                background: #fff;
+                border:1px solid silver;
+                border-radius: 5px;
+            }
+            .wrap input[type="text"],input[type="password"]{
+                width:400px;
+                height: 35px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                border: 1px solid silver;
+                padding: 5px;
+            }
+            .wrap .btn-login{
+                padding: 5px;
+                width: 412px;
+                height:40px;
+                background-color: #55add6;
+                color: #fff;
+                border:0;
+                border-radius: 3px;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mainHeading">
+            <h1>AI Face Recognition Attendance System</h1>
+        </div>
+    <div class="wrap">
+        <h2>{{title}}</h2>
+        <form action="/login" method="post">
+            <input type="text" name="user" placeholder="username" required="required">
+            <input type="password" name="password" placeholder="password" required="required">
+            <input type="submit" class="btn-login" value="Login">
+            <p style="color: red">{{msg}}</p>
+        </form>
+    </div>
+    </body>
+</html>
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+
+
+    <!-- Owl-Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
+
+    <!-- Custom Style-->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/TeacherLoginStyle.css')}}">
+</head>
+
+<style>
+    
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="panel">
+            <div class="row">
+                <div class="col liquid">
+                   
+                    <h4><i class="fas fa-drafting-compass"></i>AI FACE RECOGNITION ATTENDANCE SYSTEM</h4>
+
+                    <!-- Owl-Carousel -->
+
+                    <div class="owl-carousel owl-theme">
+                        <img src="{{url_for('static',filename='image/undraw_authentication_fsn5.svg')}}"  alt="" class="login_img">
+                        <img src="{{url_for('static',filename='image/undraw_personal_data_29co.svg')}}" alt="" class="login_img">
+                        <img src="{{url_for('static',filename='image/undraw_fingerprint_swrc.svg')}}" alt="" class="login_img">
+                    </div>
+
+                    <!-- /Owl-Carousel -->
+
+                    <div class="follow">
+                        Follow us <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+                <div class="col login">
+
+                  <!--  <button type="button" class="btn btn-signup">Sign Up</button>-->
+                    <form action="/login" method="post">
+                        <div class="titles">
+                            <h6>We keep everything</h6>
+                            <h3>Teacher Login</h3>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="username" class="form-input" name="user">
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" class="form-input" name="password">
+                            <div class="input-icon">
+                                <i class="fas fa-user-lock"></i>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-login">Login</button>
+                        <p style="color: red">{{msg}}</p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                items: 1
+            });
+        });
+    </script>
+</body>
+
+</html>
